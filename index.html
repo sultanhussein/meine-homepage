@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meine erste Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">Dein Name</div>
+
+        <ul class="nav-links">
+          <li><a href="#start">Start</a></li>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="start" class="hero">
+      <div class="container">
+        <img
+          src="bilder/mein-foto.jpg"
+          alt="Profilbild von Dein Name"
+          class="profilbild"
+        />
+
+        <h1>Willkommen auf meiner ersten Homepage</h1>
+
+        <p>
+          Ich lerne gerade, wie man Webseiten erstellt, gestaltet und später online veröffentlicht.
+        </p>
+
+        <a class="button" href="#kontakt">Kontakt aufnehmen</a>
+      </div>
+    </section>
+
+    <section id="ueber-mich" class="section">
+      <div class="container">
+        <h2>Über mich</h2>
+
+        <p>
+          Ich bin IT-Auszubildender und interessiere mich für Webseiten, Technik und moderne IT-Lösungen.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Aktueller Job</h3>
+            <p>
+              Ich bin aktuell in der Ausbildung und sammle praktische Erfahrungen im IT-Bereich.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Mein Ziel</h3>
+            <p>
+              Ich möchte eine eigene Homepage erstellen, selbstständig weiterentwickeln und später online veröffentlichen.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Nächster Schritt</h3>
+            <p>
+              Ich teste die Seite lokal und veröffentliche sie anschließend zum Beispiel über GitHub Pages oder Netlify.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section section-alt">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-header">
+            <h2>Kontakt</h2>
+            <p class="contact-intro">
+              Nutze einfach das Formular, um mir direkt eine Nachricht zu senden.
+            </p>
+          </div>
+
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/xgogbnzk"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Neue Nachricht von deiner Homepage"
+            />
+
+            <div class="honeypot-field" aria-hidden="true">
+              <label for="website">Website</label>
+              <input
+                type="text"
+                id="website"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Dein Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="deine@email.de"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="betreff">Betreff</label>
+              <input
+                type="text"
+                id="betreff"
+                name="betreff"
+                placeholder="Worum geht es?"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nachricht">Nachricht</label>
+              <textarea
+                id="nachricht"
+                name="nachricht"
+                rows="6"
+                placeholder="Schreibe hier deine Nachricht..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="button submit-button" id="submit-button">
+                <span class="button-text">Nachricht senden</span>
+                <span class="button-spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Dein Name. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
